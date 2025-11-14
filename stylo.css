@@ -6,7 +6,7 @@
   font-family: roboto;
 }
 
-/* Contenedor flexible para 3 columnas */
+/* Contenedor flexible para 4 columnas */
 .footer-container {
   display: flex;
   flex-direction: row;
@@ -46,6 +46,19 @@
 
 .footer-links a:hover {
   color: #fff;
+}
+
+/*Contacto*/
+.footer-contact {
+  flex: 1;
+  min-width: 200px;
+  font-size: 19px;
+  font-family: roboto;
+}
+
+.footer-contact p {
+  margin: 0.3rem 0; /* reduce la separación vertical */
+  color: #d3d3d3;
 }
 
 /* Redes sociales con íconos */
