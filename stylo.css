@@ -1,7 +1,7 @@
 /* Footer general */
 .footer {
-  background-color: #2e2e2e; /* Fondo oscuro para contraste */
-  color: white;
+  background-color: #9bbcc0; /* Fondo oscuro para contraste */
+  color: rgb(0, 0, 0);
   padding: 2.5rem 1rem;
   font-family: roboto;
 }
@@ -44,7 +44,7 @@
 
 .footer-links a {
   display: block;
-  color: #ccc;
+  color: #636262;
   text-decoration: none;
   margin: 0.3rem 0;
 }
@@ -65,7 +65,7 @@
 
 .footer-contact p {
   margin: 0.3rem 0; /* reduce la separación vertical */
-  color: #d3d3d3;
+  color: #636262;
 }
 
 /* Redes sociales con íconos */
