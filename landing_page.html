@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="e">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,7 +13,9 @@
 
 
 <!--Encabezado-->
+  <header>
     <nav class="topheader">
+      <!--logo-->
       <a href="" class="logo">
         <img width="50" height="50" src="images/logo1.png" alt=""/>
       </a>
@@ -22,6 +24,7 @@
         &#9776;
         <!-- Ícono de hamburguesa -->
       </button>
+      <!--Menu principal-->
       <ul class="Menu-Horizontal">
         <li>
           <a href="">Cursos</a>
@@ -44,11 +47,13 @@
         </li>
         <li>
           <a href="">Contacto</a></li>
-      </ul>    
+      </ul>
+      <!--carrito-->    
       <a href="" class="compra-logo">
         <img width="40" height="40" src="images/carrito.png" alt=""/>
       </a>
     </nav>
+  </header>
 
     <!--Cursos Online-->
     <section class="seccion-cursos-online">
@@ -179,30 +184,30 @@
 
           <!-- SCRIPT PARA EL BOTÓN VERIFICAR -->
           <script>
-            const btn = document.querySelector(".btn-verificar");
+            const btnVerificar = document.querySelector(".btn-verificar");
             const correoInput = document.querySelector("#correo");
             const mensaje = document.querySelector("#mensaje-correo");
-
-            btn.addEventListener("click", () => {
-                let correo = correoInput.value;
-
+          
+            if (btnVerificar) {
+              btnVerificar.addEventListener("click", () => {
+                const correo = correoInput.value || "";
+          
                 if (!correo) {
-                    mensaje.textContent = "Por favor, ingresa un correo.";
-                    mensaje.style.color = "red";
-                    return;
+                  mensaje.textContent = "Por favor, ingresa un correo.";
+                  mensaje.style.color = "red";
+                  return;
                 }
-
+          
                 if (/^[a-zA-Z0-9._%+-]+@gmail\.com$/.test(correo)) {
-                    mensaje.textContent = "Correo válido ✔️";
-                    mensaje.style.color = "green";
+                  mensaje.textContent = "Correo válido ✔️";
+                  mensaje.style.color = "green";
                 } else {
-                    mensaje.textContent = "El correo debe terminar en @gmail.com";
-                    mensaje.style.color = "red";
+                  mensaje.textContent = "El correo debe terminar en @gmail.com";
+                  mensaje.style.color = "red";
                 }
-            });
-          </script>
-
-        </form>
+              });
+            }
+          </script>          
       </div>
     </section>
     
@@ -272,6 +277,6 @@
         </div>
       </footer>
     </section>    
-  <script src="menu_toggle.js"></script>
+  <script src="menu_toggle.js" defer></script>
   </body>
 </html>

@@ -29,39 +29,80 @@ body {
   align-items: center;
   margin: 0;
   padding: 0;
-  gap: 12.5rem;
-  font-size: 24px;
-  font-family: roboto;
-  margin: 0;
-  padding: 0;
+  gap: 2rem;
+  flex-wrap: wrap;
+  font-size: 1.5rem;
+  font-family: "Roboto", sans-serif;
+}
+
+.Menu-Horizontal li {
+  position: relative; /* necesario para posicionar el submenú debajo */
 }
 
 .Menu-Horizontal li a {
-  display: Block;
+  display: inline-block;
   font-weight: 700;
-  color: rgb(67, 67, 90);
+  color: #333;
   text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: background 0.2s ease, color 0.2s ease;
+  font-family: roboto;
 }
 
 .Menu-Horizontal li a:hover {
-  color: red;
+  background-color: #e0e0ff;
+  color: #5145a8;
 }
 
-.Menu-Horizontal li:hover .Menu-Vertical-Promociones,
-.Menu-Horizontal li:hover .Menu-Vertical-Cursos {
-  display: block;
-}
-
-.Menu-Vertical-Promociones,
-.Menu-Vertical-Cursos {
-  font-size: 20px;
-  font-family: roboto;
-  background-color: rgb(177, 212, 212);
-  background-size: contain;
-  list-style: none;
-  padding: 10px;
+/* Submenús ocultos por defecto con animación */
+.Menu-Vertical-Cursos,
+.Menu-Vertical-Promociones {
   position: absolute;
-  display: none;
+  top: 100%; /* justo debajo del ítem padre */
+  left: 0;
+  background-color: #ffffff;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  min-width: 220px;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  transform: scaleY(0);
+  transform-origin: top center;
+  opacity: 0;
+  transition: transform 0.25s ease, opacity 0.2s ease;
+  z-index: 999;
+}
+
+/* Mostrar submenú al hacer hover */
+.Menu-Horizontal li:hover .Menu-Vertical-Cursos,
+.Menu-Horizontal li:hover .Menu-Vertical-Promociones {
+  transform: scaleY(1);
+  opacity: 1;
+}
+
+/* Estilo de los ítems del submenú */
+.Menu-Vertical-Cursos li,
+.Menu-Vertical-Promociones li {
+  border-bottom: 1px solid #a2c4c7;
+  font-size: 1.1rem;
+}
+
+.Menu-Vertical-Cursos li a,
+.Menu-Vertical-Promociones li a {
+  display: block;
+  padding: 10px 16px;
+  color: #333;
+  text-decoration: none;
+  transition: background 0.2s ease;
+  font-family: roboto;
+  font-weight: 50;
+}
+
+.Menu-Vertical-Cursos li a:hover,
+.Menu-Vertical-Promociones li a:hover {
+  background-color: #f3f6ff;
 }
 
 .seccion-cursos-online {
@@ -256,7 +297,7 @@ body {
 .formulario select {
   width: 100%;
   padding: 10px;
-  border: 1px;
+  border: 1px solid;
   border-radius: 3px;
   box-sizing: border-box;
 }
@@ -289,10 +330,91 @@ body {
   align-items: center;
 }
 
+.btn-enviar:hover,
+.btn-verificar:hover {
+  background-color: #ddd;
+}
+
 .formulario input[type="email"] {
   width: 100%;
   padding: 10px;
   border: 3px solid #ccc;
   border-radius: 3px;
   box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .Menu-Horizontal {
+    position: fixed;
+    top: 3.75rem;
+    left: 0;
+    width: 220px;
+    max-height: 80vh; /* o ajusta según lo que necesites */
+    background: linear-gradient(135deg, #f0f4ff, #dbe3ff);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+    gap: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    display: none;
+  }
+
+  .Menu-Horizontal.active {
+    display: flex;
+  }
+
+  .Menu-Horizontal li {
+    position: relative;
+    width: 100%;
+  }
+
+  .Menu-Horizontal li a {
+    display: block;
+    width: 100%;
+    padding: 10px 16px;
+    color: #333;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background 0.2s ease;
+  }
+
+  .Menu-Horizontal li a:hover {
+    background-color: #e0e0ff;
+  }
+
+  .Menu-Vertical-Cursos,
+  .Menu-Vertical-Promociones {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    min-width: 180px;
+    background-color: #fff;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transform: scaleX(0);
+    transform-origin: left center;
+    opacity: 0;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+    z-index: 999;
+  }
+
+  .Menu-Horizontal li:hover .Menu-Vertical-Cursos,
+  .Menu-Horizontal li:hover .Menu-Vertical-Promociones {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+
+  .Menu-Vertical-Cursos li a,
+  .Menu-Vertical-Promociones li a {
+    display: block;
+    padding: 10px 14px;
+    color: #333;
+    text-decoration: none;
+  }
+
+  .Menu-Vertical-Cursos li a:hover,
+  .Menu-Vertical-Promociones li a:hover {
+    background-color: #f3f6ff;
+  }
 }
