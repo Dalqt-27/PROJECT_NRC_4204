@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>My website</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="stylo.css"/>
+  </head>
+  <body>
+
+
+<!--Encabezado-->
+    <nav class="topheader">
+      <a href:"" class="logo">
+        <img width="50" height="50" src="images/logo1.png" alt=""/>
+      </a>
+      <ul class="Menu-Horizontal">
+        <li>
+          <a href="">Cursos</a>
+          <ul class="Menu-Vertical-Cursos">
+            <li><a href="">Programación</a></li>
+            <li><a href="">Ilustración</a></li>
+            <li><a href="">Marketing y Negocios</a></li>
+            <li><a href="">Inteligencia Artificial</a></li>
+            <li><a href="">3D y Animación</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="">Eventos</a></li>
+        <li>
+          <a href="">Promociones</a>
+          <ul class="Menu-Vertical-Promociones">
+            <li><a href="">Descuentos</a></li>
+            <li><a href="">Ofertas</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="">Contacto</a></li>
+      </ul>    
+      <a href="" class="compra-logo">
+        <img width="40" height="40" src="images/carrito.png" alt=""/>
+      </a>
+    </nav>
+
+    <!--Cursos Online-->
+    <section class="seccion-cursos-online">
+      <div class="div-hor-cursos-online">
+        <div class="div-texto-cursos-online">
+          <h2>Cursos Online</h2>
+          <p>Un curso en línea es un programa educativo que se realiza completamente a través de internet, utilizando plataformas virtuales para ofrecer clases, materiales y comunicación. Este modelo permite a los estudiantes aprender desde cualquier lugar. Disfruta aprendiendo desde casa sin horarios fijos y con un método fácil de seguir. Tú marcas tu propio ritmo.</p>
+          <button>Mas Información</button>
+        </div>
+        <div class="div-img-cursos-online">
+          <img src="images/curso.jpg"/>
+        </div>
+      </div>
+    </section>
+
+    <!--Eventos Próximos-->
+    <section class="seccion-eventos-proximos">
+      <div class="div-hor-eventos-proximos">
+        <div class="div-video-eventos-proximos">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/FPzWpdfH4vw?si=TpVEV8ocri4Ph-Cf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <div class="div-texto-eventos-proximos">
+          <h2>Eventos Próximos</h2>
+          <p>Un evento académico es una reunión de personas de un mismo campo profesional o área de estudio para debatir, intercambiar experiencias, presentar investigaciones y aprender sobre temas relevantes. Estos eventos, como congresos, simposios y talleres, buscan enriquecer la formación integral de los participantes a través de la enseñanza y la capacitación.</p>
+          <button>Mas Información</button>
+        </div>
+      </div>
+    </section>
+
+    <!--Promociones Disponibles-->
+    <section class="seccion-promociones-disponibles">
+      <div class="div-hor-promociones-disponibles">
+        <div class="div-texto-promociones-disponibles">
+          <h2>Promociones Disponibles</h2>
+          <p>una estrategia de marketing que usa tácticas a corto plazo, como ofertas, descuentos y regalos, para estimular la compra inmediata de un producto o servicio. Su objetivo es despertar el interés del consumidor, aumentar las ventas, eliminar inventario y, a menudo, atraer nuevos clientes o fidelizar a los existentes.</p>
+          <button>Mas Información</button>
+        </div>
+        <div class="div-img-promociones-disponibles">
+          <img src="https://presupuestopara.com/wp-content/uploads/2016/05/CAMPA%C3%91A-FACEBOOK-5-MAYO-promocionesydescuentos.jpg">
+        </div>
+      </div>
+    </section>
+
+    <!--Contacto-->
+    <section class="seccion-contacto">
+      <div class="div-hor-contacto">
+        <div class="div-texto-contacto">
+          <h2>Contacto y Asistencia de Ayuda</h2>
+          <p>Si tienes dudas, puedes mandar un mensaje o llamarnos</p>
+          <button>Contáctanos</button>
+        </div>
+      </div>
+    </section>
+
+
+
+    <section class="seccion-formulario-registro">
+      <div class="div-cont-formulario">
+        <h2>Formulario de Registro</h2>
+        <p>Completar los siguientes campos</p>
+    
+        <form class="formulario">
+          
+          <!-- INPUT: TEXT -->
+          <div class="campo">
+            <label for="nombre">Nombres Completos:</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Ingrese su(s) nombre(s)">
+          </div>
+    
+          <!-- LISTA DESPLEGABLE -->
+          <div class="campo">
+            <label for="pais">País:</label>
+            <select id="pais" name="pais">
+              <option value="">Seleccione un país</option>
+              <option value="peru">Perú</option>
+              <option value="chile">Chile</option>
+              <option value="argentina">Argentina</option>
+              <option value="colombia">Colombia</option>
+            </select>
+          </div>
+          
+          <!-- CHECKBOX -->
+          <div class="campo">
+            <label>Intereses:</label>
+            <ul class="lista-checkbox">
+              <li><label><input type="checkbox" name="intereses" value="a"> Música</label></li>
+              <li><label><input type="checkbox" name="intereses" value="b"> Negocios</label></li>
+              <li><label><input type="checkbox" name="intereses" value="c"> Digital</label></li>
+              <li><label><input type="checkbox" name="intereses" value="d"> Oficina</label></li>
+            </ul>
+          </div>
+    
+          <!-- RADIO -->
+          <div class="campo">
+            <label>Sexo:</label>
+            <ul class="lista-radio">
+              <li><label><input type="radio" name="sexo" value="fem"> Femenino</label></li>
+              <li><label><input type="radio" name="sexo" value="mas"> Masculino</label></li>
+            </ul>
+          </div>
+    
+          <!-- GMAIL -->
+          <div class="campo">
+            <label for="correo">Correo:</label>
+            <input 
+              type="email" 
+              id="correo" 
+              name="correo" 
+              placeholder="usuario@gmail.com" 
+              required 
+              pattern=".+@gmail\.com"
+              title="Solo se aceptan direcciones de correo @gmail.com"
+            >
+            <button type="button" class="btn-verificar">Verificar</button>
+          </div>
+
+          <!-- Mensaje de verificación -->
+          <p id="mensaje-correo" style="font-size: 14px; margin-top: 5px;"></p>
+
+          <!-- BOTÓN FINAL -->
+          <div class="campo">
+            <button class="btn-enviar" type="submit">Enviar</button>
+          </div>
+
+          </form>
+          </div>
+          </section>
+
+          <!-- SCRIPT PARA EL BOTÓN VERIFICAR -->
+          <script>
+            const btn = document.querySelector(".btn-verificar");
+            const correoInput = document.querySelector("#correo");
+            const mensaje = document.querySelector("#mensaje-correo");
+
+            btn.addEventListener("click", () => {
+                let correo = correoInput.value;
+
+                if (!correo) {
+                    mensaje.textContent = "Por favor, ingresa un correo.";
+                    mensaje.style.color = "red";
+                    return;
+                }
+
+                if (/^[a-zA-Z0-9._%+-]+@gmail\.com$/.test(correo)) {
+                    mensaje.textContent = "Correo válido ✔️";
+                    mensaje.style.color = "green";
+                } else {
+                    mensaje.textContent = "El correo debe terminar en @gmail.com";
+                    mensaje.style.color = "red";
+                }
+            });
+          </script>
+
+        </form>
+      </div>
+    </section>
+    
+    <!-- PIE DE PAGINA -->
+
+    <section id="footer">
+      <footer class="footer">
+        <div class="footer-container">
+          <!-- Logo y nombre de sitio -->
+          <div class="footer-brand">
+            <h4>Teklases</h4>
+            <img
+              src="images/logo1.png"
+              alt="Logo"
+              class="footer-logo"
+            />
+            <small>© 2025 Todos los derechos reservados</small>
+          </div>
+
+          <!-- Enlaces legales -->
+          <div class="footer-links">
+            <h4>Legalidad</h4>
+            <a href="/Documentos/3.politica-privacidad.pdf"
+              >Política de Privacidad</a
+            >
+            <!-- Dentro de href llama a un documento pdf con la poltica-->
+            <a href="#">Términos y Condiciones</a>
+            <!-- Dentro de href llama a un documento pdf con los terminos y condiciones-->
+            <a href="/Documentos/LeyProteccionDatos.pdf">Protección de Datos</a>
+          </div>
+
+          <!--Contacto-->
+          <div class="footer-contact">
+            <h4>Contacto</h4>
+            <p>Háblanos si tienes alguna duda</p>
+            <p>Atención 24h</p>
+          </div>
+
+          <!-- Redes sociales con íconos personalizados -->
+          <div class="footer-social">
+            <h4>Síguenos en nuestra redes</h4>
+            <a href="#"
+              ><img
+                src="https://cdn-icons-png.flaticon.com/512/145/145802.png"
+                alt="Facebook"
+                class="social-icon"
+            /></a>
+            <a href="#"
+              ><img
+                src="https://cdn-icons-png.flaticon.com/512/145/145812.png"
+                alt="Instagram"
+                class="social-icon"
+            /></a>
+            <a href="#"
+              ><img
+                src="https://cdn-icons-png.flaticon.com/512/145/145807.png"
+                alt="LinkedIn"
+                class="social-icon"
+            /></a>
+            <a href="#"
+              ><img
+                src="https://cdn-icons-png.flaticon.com/512/145/145806.png"
+                alt="Twitter"
+                class="social-icon"
+            /></a>
+          </div>
+        </div>
+      </footer>
+    </section>    
+
+  </body>
+</html>
