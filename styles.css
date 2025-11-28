@@ -3,7 +3,7 @@ body {
   padding: 0;
 }
 
-.topheader logo {
+.topheader .logo {
   display: flex;
 }
 
@@ -66,7 +66,8 @@ body {
 
 .seccion-cursos-online {
   padding: 80px 10px;
-  background-color: rgb(255, 255, 255);
+  background: linear-gradient(110deg, #d8bbe6 5%, #6e4d7e 90%);
+  margin-bottom: 0.5rem;
 }
 .div-hor-cursos-online {
   display: flex;
@@ -93,14 +94,15 @@ body {
 .div-texto-cursos-online button,
 .div-texto-eventos-proximos button,
 .div-texto-promociones-disponibles button {
-  font-size: 14px;
+  font-size: 16px;
   margin-top: 20px;
   padding: 10px 20px;
-  background-color: rgb(172, 179, 243);
-  color: black;
+  background-color: rgb(81, 90, 168);
+  color: rgb(255, 255, 255);
   border: none;
   border-radius: 10px;
   cursor: pointer;
+  font-family: roboto;
 }
 
 .div-img-cursos-online img {
@@ -113,6 +115,8 @@ body {
 .seccion-eventos-proximos {
   padding: 60px 10px;
   background-color: rgb(255, 255, 255);
+  background: linear-gradient(110deg, #5e548a 5%, #9c9abd 90%);
+  margin-bottom: 0.5rem;
 }
 .div-hor-eventos-proximos {
   display: flex;
@@ -143,6 +147,8 @@ body {
 .seccion-promociones-disponibles {
   padding: 60px 10px;
   background-color: white;
+  background: linear-gradient(110deg, #d8bbe6 5%, #6e4d7e 90%);
+  margin-bottom: 0.5rem;
 }
 
 .div-hor-promociones-disponibles {
@@ -177,6 +183,8 @@ body {
 .seccion-contacto {
   padding: 60px 10px;
   background-color: white;
+  background: linear-gradient(110deg, #5e548a 5%, #9c9abd 90%);
+  margin-bottom: 0.5rem;
 }
 
 .div-hor-contacto {
